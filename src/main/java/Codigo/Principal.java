@@ -17,9 +17,9 @@ public class Principal {
         Scanner objeto = new Scanner(System.in);
         Stack pila = new Stack();
         String caracteres = objeto.nextLine();
-        int largo = caracteres.toCharArray().length;
+        int largo = caracteres.toCharArray().length;// Se obtiene el largo para crear el arreglo perfecto para este 
         char[] arregloCadena = new char[largo];
-        arregloCadena = caracteres.toCharArray();
+        arregloCadena = caracteres.toCharArray();// se asigna una referencia al arreglo
         
         for(int i = 0; i < arregloCadena.length; i++)
         {
@@ -52,7 +52,7 @@ public class Principal {
             }
                             
         }
-        
+        // Se verifica si la pila esta vacia 
         if(pila.vacio() == false)
         {
             System.out.println("Se digitaron más caracteres de apertura");
