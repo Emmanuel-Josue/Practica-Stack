@@ -4,12 +4,13 @@
  */
 package Codigo;
 
-
+// Esta clase se modigica para trabajar con String y char
 public class CNodo {
     
     //Datos que guardara el nodo
     private int dato;
     private String palabra;
+    private char caracter;
     
     //Esta variable de referencia es utilizada para apuntar al nodo siguiente.
     private CNodo siguiente = null;
@@ -18,6 +19,14 @@ public class CNodo {
     public int getDato()
     {
         return dato;
+    }
+
+    public char getCaracter() {
+        return caracter;
+    }
+
+    public void setCaracter(char caracter) {
+        this.caracter = caracter;
     }
 
     public String getPalabra() {

@@ -4,6 +4,8 @@
  */
 package Codigo;
 
+// A este codigo le realizamos cambios para poder trabajar con datos de tipo String y char
+
 public class Stack {
  
     //Hacemos una implementación basada en la lista ligada 
@@ -75,6 +77,32 @@ public class Stack {
         {
             System.out.println("La pila esta vacia ");
             valor = -1;
+        }
+        return valor;
+    }
+    public char popChar()
+    {
+        //Esta version no contiene codigo de seguridad 
+        //colocar una excepcion cuando se intente hacer un pop a un stack vacio 
+        
+        char valor = '\0';
+        
+        //llevamos a cabo el trabajo solo si hay elementos en el stack 
+        if(ancla.getSiguiente() != null )
+        {
+            //obtenemos el dato correspondiente 
+            trabajo = ancla.getSiguiente();
+            valor = trabajo.getCaracter();
+            
+            //Lo sacamos del stack 
+            ancla.setSiguiente(trabajo.getSiguiente());
+            trabajo.setSiguiente(null);
+            
+        }
+        else if(ancla.getSiguiente() == null)
+        {
+            System.out.println("La pila esta vacia ");
+            valor = '\0';
         }
         return valor;
     }
