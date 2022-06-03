@@ -53,6 +53,19 @@ public class Stack {
         ancla.setSiguiente(temp);
         
     }
+    public void push(char dato)
+    {
+        // creamos un nodo temporal
+        CNodo temp = new CNodo();
+        temp.setCaracter(dato);
+        
+        // conectamos el tem a la lista 
+        temp.setSiguiente(ancla.getSiguiente());
+        
+        // conectamos el ancla a temporal 
+        ancla.setSiguiente(temp);
+        
+    }
     
     public int pop()
     {
@@ -93,7 +106,6 @@ public class Stack {
             //obtenemos el dato correspondiente 
             trabajo = ancla.getSiguiente();
             valor = trabajo.getCaracter();
-            
             //Lo sacamos del stack 
             ancla.setSiguiente(trabajo.getSiguiente());
             trabajo.setSiguiente(null);

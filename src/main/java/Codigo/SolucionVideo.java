@@ -48,17 +48,16 @@ public class SolucionVideo {
                 {
                     //obtenemos el caracter correspondiente y eliminamos de la pila al objeto que lo contiene
                     eliminado = pila.popChar();
-                    
                     // verificamos que tenga coincidencia 
                     if(eliminado == '(' && caracter != ')' )
                     {
                         System.out.println("Se esperaba un )");
                     }
-                    else if(eliminado == '[' && caracter != ']' )
+                    if(eliminado == '[' && caracter != ']' )
                     {
                         System.out.println("Se esperaba un ]");
                     }
-                    else if(eliminado == '{' && caracter != '}' )
+                    if(eliminado == '{' && caracter != '}' )
                     {
                         System.out.println("Se esperaba un }");
                     }
